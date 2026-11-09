@@ -1,0 +1,19 @@
+[package]
+name = "chatapp"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+uniffi = { version = "0.32.2", features = ["cli"] }
+garde = { version = "0.23", features = ["full"] }
+thiserror = "1.0"
+reqwest = { version = "0.13", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+serde = "1.0.229"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
